@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+
+  exporter:
+    restart: always
+    container_name: exporter
+    image: lukasbahr/prometheus-fritzdect-exporter:arm32v6
+    environment:
+      - EXPORTER_PORT=9102
+    expose: 
+      - 9102
+    networks:
+      - pi
+
+
+networks: 
+  pi: 
+    external: true

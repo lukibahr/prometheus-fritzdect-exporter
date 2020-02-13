@@ -1,0 +1,2 @@
+prometheus_client==0.7.1 
+fritzconnection==1.2.1
