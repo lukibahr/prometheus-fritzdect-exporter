@@ -15,7 +15,7 @@ steps:
     image: plugins/docker
     settings:
       repo: lukasbahr/prometheus-fritzdect-exporter
-      tags: arm32v6
+      tags: $DRONE_TAG
       dockerfile: Dockerfile
       username:
         from_secret: REGISTRY_USER

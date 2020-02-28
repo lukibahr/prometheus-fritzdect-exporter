@@ -1,6 +1,6 @@
 # Prometheus exporter for FRITZ!Dect devices
 
-Prometheus Endpoint, written in Python to read FRITZ!Dect devices and export values as prometheus metrics.
+Prometheus Endpoint, written in Python to read FRITZ!Dect devices and export values as prometheus metrics. [![Build Status](https://ci.devopoly.de/api/badges/lukibahr/raspbi-temperature-exporter/status.svg)](https://ci.devopoly.de/lukibahr/raspbi-temperature-exporter)
 
 ## Prerequisites - Creating the FRITZ!Box User
 
@@ -31,13 +31,13 @@ $ python3 exporter.py --< args[] >
  'NewFunctionBitMask': 2944, 
  'NewFirmwareVersion': '04.16', 
  'NewManufacturer': 'AVM', 
- 'NewProductName': 'FRITZ!DECT 200', 
- 'NewDeviceName': 'FRITZ!DECT 200 #1',
+ 'NewProductName': 'FRITZ!DECT', 
+ 'NewDeviceName': 'FRITZ!DECT',
  'NewPresent': 'CONNECTED',
  'NewMultimeterIsEnabled': 'ENABLED', 
  'NewMultimeterIsValid': 'VALID', 
  'NewMultimeterPower': 0, //current power in watts  Power value [1/100 W] 
- 'NewMultimeterEnergy': 132767, //Total consumption over the last year in kWh
+ 'NewMultimeterEnergy': , //Total consumption over the last year in kWh
  'NewTemperatureIsEnabled': 'ENABLED', 
  'NewTemperatureIsValid': 'VALID', 
  'NewTemperatureCelsius': 200, 
