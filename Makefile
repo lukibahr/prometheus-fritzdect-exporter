@@ -7,6 +7,7 @@ RUNDOCKER = $(shell which docker)
 
 IMAGE = lukasbahr/prometheus-fritzdect-exporter
 VERSION = master
+PYLINTRC = $(PWD)/.pylintrc
 
 EXPORTER_PORT=8888
 

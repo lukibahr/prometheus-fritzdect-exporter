@@ -1,0 +1,27 @@
+---
+kind: pipeline
+name: build
+
+clone:
+  depth: 50
+
+steps:
+  - name: fetch
+    image: docker:git
+    commands:
+      - git fetch --tags
+
+  - name: publish
+    image: plugins/docker
+    settings:
+      repo: lukasbahr/prometheus-fritzdect-exporter
+      tags: arm32v6
+      dockerfile: Dockerfile
+      username:
+        from_secret: REGISTRY_USER
+      password:
+        from_secret: REGISTRY_PASSWORD
+    when:
+      event:
+        - push
+        - tag
